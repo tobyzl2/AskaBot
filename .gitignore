@@ -3,3 +3,4 @@ data
 .ipynb_checkpoints
 .idea
 aska_bot/models
+aska_bot/src/keyword_matching/__pycache__
