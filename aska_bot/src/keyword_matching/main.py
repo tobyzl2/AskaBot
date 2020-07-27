@@ -8,7 +8,8 @@ from aska_bot.src.keyword_matching.model import BertKeywordModel
 if __name__ == "__main__":
     # model paths
     model_name = "bert-base-uncased"
-    model_path = "../../models/keyword_matcher_{}.pt".format(model_name)
+    version = "v2.0"
+    model_path = "../../models/keyword_matcher_{}_{}.pt".format(model_name, version)
 
     # get tokenizer
     tokenizer = BertTokenizer.from_pretrained(model_name)
@@ -32,7 +33,7 @@ if __name__ == "__main__":
 
             # print output
             output_index = [i for i, x in enumerate(prediction[0]) if x == 1]
-            output = [tokenizer.decode(tokens["input_ids"][i]) for i in output_index]
+            output = [tokenizer.convert_ids_to_tokens(tokens["input_ids"][i]) for i in output_index]
             print(output)
     else:
         print("No model found at {}".format(model_path))

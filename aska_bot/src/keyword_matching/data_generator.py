@@ -5,7 +5,7 @@ import re
 import pandas as pd
 from nltk.corpus import stopwords
 
-from aska_bot.src.page_matcher.wikipedia_api import WikipediaAPI
+from aska_bot.src.page_matching.wikipedia_api import WikipediaAPI
 
 SPLIT_REGEX = r"[_\-\–\s]"
 

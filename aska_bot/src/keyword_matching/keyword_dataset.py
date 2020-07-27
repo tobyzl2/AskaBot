@@ -51,7 +51,7 @@ def get_dataloaders(keyword_dataset_path, json_path=None, batch_size=64, test_si
         assert False
 
     # train test split
-    df_train, df_test = train_test_split(df, test_size=test_size, random_state=random_seed)
+    df_train, df_test = train_test_split(df, test_size=test_size, random_state=random_seed, shuffle=False)
 
     # instantiate datasets
     keyword_train_dataset = KeywordDataset(df_train)

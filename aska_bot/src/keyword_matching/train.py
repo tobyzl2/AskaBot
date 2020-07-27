@@ -63,7 +63,8 @@ if __name__ == "__main__":
 
     # model paths
     model_name = "bert-base-uncased"
-    model_path = "../../models/keyword_matcher_{}.pt".format(model_name)
+    version = "v2.0"
+    model_path = "../../models/keyword_matcher_{}_{}.pt".format(model_name, version)
 
     # hyperparameters
     random_seed = 42
@@ -71,6 +72,9 @@ if __name__ == "__main__":
     batch_size = 256
     lr = 5.0e-6
     epochs = 5
+
+    # reproducibility
+    torch.manual_seed(random_seed)
 
     # metrics
     metrics_dict = {
