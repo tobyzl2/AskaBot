@@ -13,6 +13,10 @@ Scores are as follows:
 - recall: 0.701
 
 ## Future Development
+- Implement context searching pipeline
+- Context batching
 - Improvements on keyword matching, especially for identifying more than one keyword.
-- Implement spell-checking/auto-correct for question input
-- Implement bot to ask yes/no clarification questions
+- Spell-checking/auto-correct for question input
+- Yes/no clarification questions for named entities
+- Detect when answer is not in context using output scores
+- Evaluate different pre-processing methodologies for context
