@@ -62,7 +62,7 @@ if __name__ == "__main__":
     json_path = "../../../data/SQUAD_v2.0/train.json"
 
     # model paths
-    model_name = "bert-base-uncased"
+    model_name = "bert-base-cased"
     version = "v2.0"
     model_path = "../../models/keyword_matcher_{}_{}.pt".format(model_name, version)
 
